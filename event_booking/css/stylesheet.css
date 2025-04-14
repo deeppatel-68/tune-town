@@ -1,0 +1,354 @@
+@charset "utf-8";
+/*Affects the whole document */
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+
+/*To wrap the content of the whole page. */
+#wrapper {
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  padding: 92px;
+}
+.wrapper.list {
+  grid-template-columns: 1fr;
+}
+
+.wrapper .col {
+  width: calc(100% - 20px);
+  height: 200px;
+  background: #912f40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fffffa;
+  margin: 20px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2d2d2d;
+  color: white;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #912f40;
+  background-color: #000;
+  border: none;
+  border-radius: 0;
+  z-index: 1; 
+}
+
+.navbar-brand {
+  font-family: Arial, Helvetica, sans-serif, Verdana, Tahoma, sans-serif; 
+  font-size: 32px;
+  font-weight: bold;
+  padding: 15px 0;
+  text-decoration: none;
+}
+
+.navbar-brand>a:link {
+  text-decoration: none;
+}
+
+
+.navbar-nav>li>a {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  margin-left: 2rem;
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:focus {
+  color: #2d2d2d;
+  background-color: #f5f5f5;
+}
+
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+h1{
+  padding: 0;
+  margin: 0;
+  
+}
+
+h2{
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  margin: 50px;
+  text-shadow: 2px 2px 5px green;
+}
+
+h4{
+  font-size: 25px;
+  text-align: center;
+  color: black;
+  margin: 60px;
+}
+
+h5{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  margin-top: 50px;
+  padding-top: 10px;
+
+}
+h6{
+  text-align: center;
+  font-size: medium;
+  padding: 5px;
+}
+
+
+.event {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  
+}
+.event-detail {
+  flex: 1 0 250px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  margin: 10px 8px 8px 8px;
+  padding: 8px;
+  transition: transform 0.2s ease-in-out; /* add a hover effect */
+  overflow: hidden;  /* hide overflowing content */
+  text-overflow: ellipsis; /* add an ellipsis for long titles */
+}
+
+
+.event-detail:hover {
+  transform: translateY(-5px); /* move the element up on hover */
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.5); /* increase box-shadow on hover */
+  background-color: #fff; /* change background color on hover */
+  color: #1f060a; /* change font color on hover */
+}
+
+.event-detail img {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 20px; 
+}
+
+.event-detail .button {
+  display: block; /* change display property to block */
+  background-color: #912f40; /* change background color */
+  color: #fff; /* change font color */
+  text-align: center; /* center align the button */
+  padding: 8px; /* add some padding */
+  border: none; /* remove border */
+  border-radius: 4px; /* add border radius */
+  cursor: pointer; /* change cursor to pointer */
+  position: absolute; /* add position property */
+  bottom: 8px; /* add some spacing from the bottom */
+  left: 50%; /* move the button to the center */
+  transform: translateX(-50%); /* center align the button */
+  transition: background-color 0.2s ease-in-out; /* add a hover effect to background-color */
+}
+
+
+.event-detail h3 {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+}
+.event-detail p {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+
+@media screen and (min-width: 768px) {
+  .event-detail {
+    flex: 1 0 30%;
+    max-width: 300px;
+  } 
+
+  .jumbotron {
+    height: 700px;
+    background-image: url('https://assets.prod.bandsintown.com/images/homeIcon/heroBanner.png');
+    background-size: cover;
+    
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .jumbotron h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #4681f4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .jumbotron h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  
+
+footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #222;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  border-top: 4px solid #4681f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+form {
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #f5f5f5f5;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 4px;
+  background-color: rgba(207, 207, 207, 1.00);
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus {
+  border: 3px solid #555;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  width: 100%;
+  background-color: #008cff;
+  color: white;
+  padding: 14px 20px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  background: linear-gradient(to bottom, #008cff 0%, #00bfff 100%);
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2);
+}
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background: linear-gradient(to bottom, #00bfff 0%, #008cff 100%);
+}
+
+
+/**/
+#comment-box, #post {
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+
+#post:hover{
+  background-color: #4681f4;
+  color: white;
+}
+
+#post{
+  background-color: rgb(196, 193, 193);
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+
+
+.btn-primary {
+  background-color: #4681f4;
+  border-color: #4681f4;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #55c2da;
+  border-color: #55c2da
+}
+
+/*POPUP*/ 
+
